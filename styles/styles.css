@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cambria, Cochin;
   }
   
   /* ==== Variables ==== */
@@ -11,7 +12,7 @@
     --color-secundario: #6c63ff;
     --color-texto: #eeeeee;
     --color-fondo: #111111;
-    --color-acento: #ff4c60;
+    --color-acento: #335FF9;
     --fuente-principal: 'Poppins', sans-serif;
   }
   
@@ -180,14 +181,39 @@ border: 1px solid blueviolet;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  gap: 15px;
+}
+h2{
+display: flex;
+font-family: Cambria, Cochin;
+justify-content: start;
 }
 
-.btn-cta{
-  color: red;
-  background-color: blue;
-  width: 100px;
+h3 {
+  display: flex;
+  justify-content: start;
+  text-align: start;
+  font-size: 45px;
+  font-family: Cambria, Cochin;
+  background: #335FF9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p{
+  display: flex;
+  text-align: start;
 }
 
+.btn-cta {
+  text-align: center; /* horizontal */
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+  background-color: #272727;
+  width: 140px;
+  height: 35px;
+  border-radius: 12px; /* altura fija para que el centrado vertical funcione */
+}
 
 .hero-imagen{
   object-fit: cover;
