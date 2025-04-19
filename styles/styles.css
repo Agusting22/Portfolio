@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial Narrow Bold, sans-serif;
+
 }
 
 /* ==== Variables ==== */
@@ -22,6 +23,7 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   line-height: 1.6;
+
 }
 
 a {
@@ -98,8 +100,7 @@ top: 0px;
 left: 0;
 width: 115px;
 height: 100%;
-background: linear-gradient(to right, #4a0496, #4a0397, #490399, #49029a, #48029c, #47029e, #4701a0, #4601a2, #4501a5, #4400a8, #4200ab, #4100ae);
-border-radius: 30px 0 0 30px;
+background: linear-gradient(to right, #3e06a4, #370491, #2f037e, #28026c, #21015a);
 transition: left 0.3s ease, border-radius 0.3s ease, opacity 0.5s ease-in-out; /* Agregado el delay */
 z-index: 0;
 opacity: 0; /* Se oculta por defecto */
@@ -115,21 +116,21 @@ visibility: visible; /* Hace visible el bloque */
 }
 
 .nav-list li:nth-child(2):hover ~ .span {
-left: 117px;
+left: 122px;
 border-radius: 10px;
 opacity: 1;
 visibility: visible;
 }
 
 .nav-list li:nth-child(3):hover ~ .span {
-left: 242px;
+left: 253px;
 border-radius: 10px;
 opacity: 1;
 visibility: visible;
 }
 
 .nav-list li:nth-child(4):hover ~ .span {
-left: 367px;
+left: 381px;
 border-radius: 10px 30px 30px 10px;
 opacity: 1;
 visibility: visible;
@@ -187,7 +188,7 @@ margin-bottom: 65px;
 
 h2{
 display: flex;
-font-family: Cambria, Cochin;
+font-family: Arial Narrow Bold, sans-serif;
 justify-content: start;
 font-weight: normal;
 }
@@ -213,7 +214,7 @@ font-weight: normal;
 }
 
 h3 {
-  font-weight: normal;
+  font-weight: bold;
   position: relative;
   bottom: 15px;
 display: flex;
@@ -227,6 +228,7 @@ background-color: #8B4EF9;
 }
 
 p{
+  font-family:Arial Narrow Bold,sans-serif;
 display: flex;
 text-align: start;
 font-size: 1.2rem;
@@ -269,7 +271,7 @@ img{
   right: 90px;
   top: 25px;
   width: 500px;
-  height: 650px;
+  height: 750px;
 /*   border: 1px solid red; */
   object-fit: contain;
 }
@@ -278,7 +280,7 @@ img{
   position: absolute;
   width: 200px;
   height: 200px;
-/*   background-color: #8B4EF9; */                  /*!Revisar si ponerlo o no */
+/*   background-color: #8B4EF9;  */               /*!Revisar si ponerlo o no */
   filter: blur(150px);
 border-radius: 50%;
 top: 200px;
@@ -289,9 +291,9 @@ top: 200px;
   height: 200px;
   background-color: #8B4EF9;
   top: 0px;
-  left: 650px;
+  left: 250px;
   border-radius: 50%;
-  filter: blur(150px);
+  filter: blur(110px);
 }
 
 .blur-sec{
@@ -299,16 +301,31 @@ position: absolute;
 width: 400px;
 height: 100px;
 /* background-color: #8B4EF9; */                  /*! Revisar si ponerlo o no */
-left: 570px;
+left: 470px;
 bottom: 520px;
 filter: blur(150px);
 }
 .blur-th{
   position: absolute;
-  width: 200px;
-  height: 100px;
+  width: 380px;
+  height: 400px;
   background-color: #8B4EF9;
-  left: 1300px;
-  top: 380px;
-  filter: blur(150px);
+  left: 960px;
+  top: 150px;
+  filter: blur(90px);
 }
+.blur-ring{                              /*! Ajustar medidas mas chica o mas grande */
+  position: absolute;
+  width: 500px;
+  height: 510px;
+  background-color: #8B4EF9;
+  left: 910px;
+  top: 53px;
+  border-radius: 50%;
+  background: transparent;
+  border:25px solid #8B4EF9;
+  filter: brightness(1.01);
+}
+
+
+/* ! ARREGLAR MEDIDAS EL DIV IMG ES TAN GRANDE QUE HACE QUE LA PANTALLA MIDA 1500PX Y DEBE MEDIR 1200 */
