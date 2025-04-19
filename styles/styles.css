@@ -1,67 +1,56 @@
 /* ==== Reset CSS ==== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Cambria, Cochin;
-  }
-  
-  /* ==== Variables ==== */
-  :root {
-    --color-primario: #111111;
-    --color-secundario: #6c63ff;
-    --color-texto: #eeeeee;
-    --color-fondo: #111111;
-    --color-acento: #335FF9;
-    --fuente-principal: 'Poppins', sans-serif;
-  }
-  
-  /* ==== Estilos base ==== */
-  body {
-    font-family: var(--fuente-principal);
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-  
-  button {
-    cursor: pointer;
-    font-family: inherit;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    background-color: var(--color-secundario);
-    color: #fff;
-    transition: background-color 0.3s ease;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  button:hover {
-    background-color: var(--color-acento);
-  }
-  
-  /* ==== Layout básico ==== */
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1rem;
-  }
-  
-/* ==== Header ==== */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial Narrow Bold, sans-serif;
+}
+
+/* ==== Variables ==== */
+:root {
+  --color-primario: #111111;
+  --color-secundario: #6c63ff;
+  --color-texto: #eeeeee;
+  --color-fondo: #111111;
+  --color-acento: #272727;
+  --fuente-principal: Arial Narrow Bold, sans-serif;
+}
+
+/* ==== Estilos base ==== */
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover {
+  background-color: var(--color-acento);
+}
+.btn-cta2:hover{
+  background-color: #6c63ff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* !Header  */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: var(--color-primario);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1;
 }
 
 .nav {
@@ -74,7 +63,7 @@
   gap: 0;
   list-style: none;
   background-color: #272727;
-
+  
   padding: 0;
   border-radius: 30px;
   font-size: 0.9rem;
@@ -94,133 +83,232 @@
 .nav-list li a {
   display: block;
   padding: 9px 30px; /* Más área sin afectar texto */
-  text-decoration: none;
-  color: white;
-  z-index: 2;
-  position: relative;
-    color: #B0B0B0; /* Gris claro */
-    transition: color 0.3s ease;
+text-decoration: none;
+color: white;
+z-index: 2;
+position: relative;
+color: #B0B0B0; /* Gris claro */
+transition: color 0.3s ease;
 }
 
 /* === El bloque rojo flotante === */
 .nav-list .span {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 115px;
-  height: 100%;
-  background: linear-gradient(to right top, #192fc0, #172dbd, #162bb9, #1428b6, #1226b3);
-  border-radius: 30px 0 0 30px;
-  transition: left 0.3s ease, border-radius 0.3s ease, opacity 0.5s ease-in-out; /* Agregado el delay */
-  z-index: 0;
-  opacity: 0; /* Se oculta por defecto */
-  visibility: hidden; /* También lo ocultamos */
+position: absolute;
+top: 0px;
+left: 0;
+width: 115px;
+height: 100%;
+background: linear-gradient(to right, #4a0496, #4a0397, #490399, #49029a, #48029c, #47029e, #4701a0, #4601a2, #4501a5, #4400a8, #4200ab, #4100ae);
+border-radius: 30px 0 0 30px;
+transition: left 0.3s ease, border-radius 0.3s ease, opacity 0.5s ease-in-out; /* Agregado el delay */
+z-index: 0;
+opacity: 0; /* Se oculta por defecto */
+visibility: hidden; /* También lo ocultamos */
 }
 
 /* === Hover para mover el bloque rojo === */
 .nav-list li:nth-child(1):hover ~ .span {
-  left: 0;
-  border-radius: 30px 10px 10px 30px;
-  opacity: 1; /* Aparece con transiciones */
-  visibility: visible; /* Hace visible el bloque */
+left: 0;
+border-radius: 30px 10px 10px 30px;
+opacity: 1; /* Aparece con transiciones */
+visibility: visible; /* Hace visible el bloque */
 }
 
 .nav-list li:nth-child(2):hover ~ .span {
-  left: 123px;
-  border-radius: 10px;
-  opacity: 1;
-  visibility: visible;
+left: 117px;
+border-radius: 10px;
+opacity: 1;
+visibility: visible;
 }
 
 .nav-list li:nth-child(3):hover ~ .span {
-  left: 250px;
-  border-radius: 10px;
-  opacity: 1;
-  visibility: visible;
+left: 242px;
+border-radius: 10px;
+opacity: 1;
+visibility: visible;
 }
 
 .nav-list li:nth-child(4):hover ~ .span {
-  left: 381px;
-  border-radius: 10px 30px 30px 10px;
-  opacity: 1;
-  visibility: visible;
+left: 367px;
+border-radius: 10px 30px 30px 10px;
+opacity: 1;
+visibility: visible;
 }
 
 /* Cuando el mouse no está sobre la barra, el bloque rojo desaparece */
 .nav-list:hover .span {
-  opacity: 1;
-  visibility: visible;
+opacity: 1;
+visibility: visible;
 }
 .nav-list a:hover {
-  color: #FFFFFF; /* Blanco cuando pasa el mouse */
+color: #FFFFFF; /* Blanco cuando pasa el mouse */
 }
-  
-  
+
+
 
 
 
 /* ! ==== Hero Section ==== */
-  .hero {
-border: 1px solid red;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: end;
-    padding: 4rem;
+
+.hero {
+position: relative; /* Necesario para que los hijos absolutos se posicionen respecto a este */;
+width: 100%;
+max-height: 600px;
+display: flex;
+padding: 30px;
+z-index: 1;
+overflow: hidden;
+/* border: 1px solid red; */
+margin-bottom: 50px;
 }
 
-
-.hero-container{
-  width: 100%;
-  display: flex;
-border: 1px solid blueviolet;
-  }
+.hero-container {
+position: relative; /* por si necesitás z-index también dentro */
+width: 100%;
+height: 600px;
+display: flex;
+z-index: 1;
+border-radius: 45px;
+/* border: 1px solid red; */
+overflow: hidden;
+}
 
 .hero-texto {
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 15px;
+width: 100%;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+gap: 15px;
+margin-left: 25px;
+margin-bottom: 65px;
 }
+
 h2{
 display: flex;
 font-family: Cambria, Cochin;
 justify-content: start;
+font-weight: normal;
+}
+
+.punto{
+  position: relative;
+  top: 22px;
+  left: 3px;
+  width: 5px;
+  height: 5px;
+  display: flex;
+  justify-self: center;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: #8B4EF9;
+}
+.name{
+  position: relative;
+  bottom: 10px;
+  font-size: 1.5rem;
+  justify-content: start;
+  background-color: #fff;
 }
 
 h3 {
+  font-weight: normal;
+  position: relative;
+  bottom: 15px;
+display: flex;
+justify-content: start;
+text-align: start;
+font-size: 45px;
+font-family:Arial Narrow Bold, sans-serif;
+background-color: #8B4EF9;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+p{
+display: flex;
+text-align: start;
+font-size: 1.2rem;
+}
+
+.botones{
   display: flex;
   justify-content: start;
-  text-align: start;
-  font-size: 45px;
-  font-family: Cambria, Cochin;
-  background: #335FF9;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-p{
-  display: flex;
-  text-align: start;
+  gap: 30px;
 }
 
-.btn-cta {
-  text-align: center; /* horizontal */
-  display: flex;
-  align-items: center; /* vertical */
-  justify-content: center; /* horizontal */
+button {
+  cursor: pointer;
+  font-family: Arial Narrow Bold, sans-serif;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-secundario);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta2{
   background-color: #272727;
-  width: 140px;
-  height: 35px;
-  border-radius: 12px; /* altura fija para que el centrado vertical funcione */
+  border: 1px solid #8B4EF9 ;
 }
 
+/* ! Parte derecha HERO */
 .hero-imagen{
-  object-fit: cover;
   display: flex;
-  justify-content: end;
+  width: 800px;
+  height: 800px;
   border-radius: 1rem;
   overflow: hidden;
-  border: 10px solid green;
-  }
-  
+
+}
+
+img{
+  position: relative;
+  right: 90px;
+  top: 25px;
+  width: 500px;
+  height: 650px;
+/*   border: 1px solid red; */
+  object-fit: contain;
+}
+
+.blur{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+/*   background-color: #8B4EF9; */                  /*!Revisar si ponerlo o no */
+  filter: blur(150px);
+border-radius: 50%;
+top: 200px;
+}
+.blur-top{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #8B4EF9;
+  top: 0px;
+  left: 650px;
+  border-radius: 50%;
+  filter: blur(150px);
+}
+
+.blur-sec{
+position: absolute;
+width: 400px;
+height: 100px;
+/* background-color: #8B4EF9; */                  /*! Revisar si ponerlo o no */
+left: 570px;
+bottom: 520px;
+filter: blur(150px);
+}
+.blur-th{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: #8B4EF9;
+  left: 1300px;
+  top: 380px;
+  filter: blur(150px);
+}
