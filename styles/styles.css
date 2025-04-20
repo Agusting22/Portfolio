@@ -1,4 +1,4 @@
-/* ==== Reset CSS ==== */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 }
 
-/* ==== Variables ==== */
+/* Variables */
 :root {
   --color-primario: #111111;
   --color-secundario: #6c63ff;
@@ -17,7 +17,7 @@
   --fuente-principal: Arial Narrow Bold, sans-serif;
 }
 
-/* ==== Estilos base ==== */
+/* Estilos base */
 body {
   font-family: var(--fuente-principal);
   background-color: var(--color-fondo);
@@ -74,7 +74,6 @@ button:hover {
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 255);
 }
 
-/* === Cada ítem de navegación === */
 .nav-list li {
   position: relative;
   padding: 0;
@@ -82,9 +81,7 @@ button:hover {
   z-index: 1;
 }
 
-.nav-list li a {
-  display: block;
-  padding: 9px 30px; /* Más área sin afectar texto */
+.nav-list li a {  display: block;  padding: 9px 30px; /* Más área sin afectar texto */
 text-decoration: none;
 color: white;
 z-index: 2;
@@ -93,7 +90,6 @@ color: #B0B0B0; /* Gris claro */
 transition: color 0.3s ease;
 }
 
-/* === El bloque rojo flotante === */
 .nav-list .span {
 position: absolute;
 top: 0px;
@@ -103,20 +99,19 @@ height: 100%;
 background: linear-gradient(to right, #3e06a4, #370491, #2f037e, #28026c, #21015a);
 transition: left 0.3s ease, border-radius 0.3s ease, opacity 0.5s ease-in-out; /* Agregado el delay */
 z-index: 0;
-opacity: 0; /* Se oculta por defecto */
-visibility: hidden; /* También lo ocultamos */
+opacity: 0; 
+visibility:visible; /* También lo ocultamos */
 }
 
-/* === Hover para mover el bloque rojo === */
 .nav-list li:nth-child(1):hover ~ .span {
 left: 0;
 border-radius: 30px 10px 10px 30px;
-opacity: 1; /* Aparece con transiciones */
-visibility: visible; /* Hace visible el bloque */
+opacity: 1; 
+visibility: visible; 
 }
 
 .nav-list li:nth-child(2):hover ~ .span {
-left: 122px;
+left: 123px;
 border-radius: 10px;
 opacity: 1;
 visibility: visible;
@@ -136,11 +131,11 @@ opacity: 1;
 visibility: visible;
 }
 
-/* Cuando el mouse no está sobre la barra, el bloque rojo desaparece */
 .nav-list:hover .span {
 opacity: 1;
 visibility: visible;
 }
+
 .nav-list a:hover {
 color: #FFFFFF; /* Blanco cuando pasa el mouse */
 }
@@ -149,12 +144,13 @@ color: #FFFFFF; /* Blanco cuando pasa el mouse */
 
 
 
-/* ! ==== Hero Section ==== */
+/*! ----------------------------------------------------------- */                                 /*     HERO    */
+
 
 .hero {
-position: relative; /* Necesario para que los hijos absolutos se posicionen respecto a este */;
+position: relative;
 width: 100%;
-max-height: 600px;
+max-height: 1000px;
 display: flex;
 padding: 30px;
 z-index: 1;
@@ -164,7 +160,7 @@ margin-bottom: 50px;
 }
 
 .hero-container {
-position: relative; /* por si necesitás z-index también dentro */
+position: relative; 
 width: 100%;
 height: 600px;
 display: flex;
@@ -176,16 +172,16 @@ overflow: hidden;
 
 .hero-texto {
 width: 100%;
-
 display: flex;
 flex-direction: column;
 justify-content: center;
 text-align: center;
 gap: 15px;
-margin-left: 25px;
-margin-bottom: 65px;
+position: relative;
+bottom: 50px;
 }
 
+/*! ----------------------------------------------------------- */                                 /* TEXTO */
 h2{
 display: flex;
 font-family: Arial Narrow Bold, sans-serif;
@@ -205,6 +201,7 @@ font-weight: normal;
   padding: 3px;
   background-color: #8B4EF9;
 }
+
 .name{
   position: relative;
   bottom: 10px;
@@ -234,6 +231,7 @@ text-align: start;
 font-size: 1.2rem;
 }
 
+/*! ----------------------------------------------------------- */                                 /* BOTONES */
 .botones{
   display: flex;
   justify-content: start;
@@ -256,26 +254,26 @@ button {
   border: 1px solid #8B4EF9 ;
 }
 
-/* ! Parte derecha HERO */
-.hero-imagen{
+/*! ------------------------------------------------------------ */                         /* ! Parte derecha HERO */
+.hero-imagen{                                                                          
   display: flex;
   width: 800px;
-  height: 800px;
+  height: 600px;
   border-radius: 1rem;
   overflow: hidden;
-
 }
 
-img{
+.img1{
   position: relative;
-  right: 90px;
+  left: 10px;
   top: 25px;
-  width: 500px;
-  height: 750px;
+  width: 100%;
+  height: 45vh;
 /*   border: 1px solid red; */
   object-fit: contain;
 }
 
+/*! ----------------------------------------------------------- */                                  /* BLUR */
 .blur{
   position: absolute;
   width: 200px;
@@ -285,47 +283,97 @@ img{
 border-radius: 50%;
 top: 200px;
 }
+
 .blur-top{
   position: absolute;
   width: 200px;
   height: 200px;
   background-color: #8B4EF9;
-  top: 0px;
-  left: 250px;
+  top: -15px;
+  left: 140px;
   border-radius: 50%;
   filter: blur(110px);
 }
 
 .blur-sec{
 position: absolute;
-width: 400px;
-height: 100px;
-/* background-color: #8B4EF9; */                  /*! Revisar si ponerlo o no */
-left: 470px;
-bottom: 520px;
+left: -70px;
+width: 300px;
+height: 350px;
+background-color: #8B4EF9;                /*! Revisar si ponerlo o no */
 filter: blur(150px);
+box-shadow: 5px 5px 5px 15px #8B4EF9;
 }
+
 .blur-th{
   position: absolute;
   width: 380px;
   height: 400px;
   background-color: #8B4EF9;
-  left: 960px;
+  left: 750px;
   top: 150px;
   filter: blur(90px);
 }
 .blur-ring{                              /*! Ajustar medidas mas chica o mas grande */
   position: absolute;
-  width: 500px;
-  height: 510px;
+  width: 30rem;
+  height: 45vh;
   background-color: #8B4EF9;
-  left: 910px;
-  top: 53px;
+  left: 700px;
+  top: 29px;
   border-radius: 50%;
   background: transparent;
   border:25px solid #8B4EF9;
   filter: brightness(1.01);
 }
 
+/*! ----------------------------------------------- */                       /* ABOUT */
+.about-container{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: end;
+  align-items: top;
+  flex-wrap: wrap;
+}
 
-/* ! ARREGLAR MEDIDAS EL DIV IMG ES TAN GRANDE QUE HACE QUE LA PANTALLA MIDA 1500PX Y DEBE MEDIR 1200 */
+.about{
+  font-size: 3.2rem;
+  width: 250px;
+  height: 7vh;position: relative;
+  left: 30vw;
+}
+
+.txt-abt{
+  display: block;
+  align-self: center;
+  position: relative;
+  right: 4vw;
+  width: 600px;
+  height: 180px;
+  overflow: hidden;
+  top: 4vh;
+}
+.txt-sec{
+  font-size: 1.2rem;
+  position: relative;
+  bottom: 5vh;
+}
+
+.resaltado{
+  color: #8B4EF9;
+  box-shadow: 0 0 1px 0 #8B4EF9;
+}
+.linea{
+  position: relative;
+  width: 270px;
+  height: 7px;
+  box-shadow:
+  0 0 5px #8B4EF9,
+  0 0 10px #8B4EF9,
+  0 0 20px #8B4EF9,
+  0 0 40px #8B4EF9;
+  bottom: 560px;
+  left: 930px;
+  background-color: #8B4EF9;
+}
