@@ -3,78 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - [Tu Nombre]</title>
+  <title>Portfolio-Agus G</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
+  
 </head>
-<body>
+<body >
 
-    <!--! Header -->
-    <header>
-      <div class="container header-container">
-        <div class="logo"><img class="imglogo" src="./public/logoag.jpeg" alt=""></div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <span class="span"></span>
-          </ul>
-        </nav>
-      </div>
-      <div class="blur-top"></div>
-      <div class="blur-th"></div>
-    </header>
+      <!--! Header -->
+      <header>
+        <div class="header-container">
   
-  
-  
-  
-  
-    <section class="hero">
-      <div class="blur"></div>
-      <div class="blur-ring"></div>
-  
-      <div class="container">
-        <div class="hero-container">
-          <div class="hero-texto">
-            <h2>Hola <p class="punto"></p> <br></h2>
-            <h3 class="name">Soy Agustin Gonzalez</h3>
-            <h3>Programador + <br>Desarrollador Full Stack </h3>
-            <p>Entusiasta con experiencia en
-              Desarrollo de software,<br> habilidades para la resolución de
-              problemas y trabajo en equipo.</p>
-              <div class="botones">
-                <button class="btn-cta">Descargar CV</button>
-                <button class="btn-cta2">Contacto</button>
+          <div class="logo"><img class="imglogo" src="./public/logoag.svg" alt=""></div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a href="#sobre-mi">Sobre mí</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+              <li><a href="#habilidades">Habilidades</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <span class="span"></span>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+      
+      
+      <!--! HERO -->
+      
+      <section class="hero">
+        
+        <div class="container">
+          <div class="blur-th"></div>
+          <div class="blur-ring"><img class="img1" src="./public/agusimg.webp" alt="Foto"></div>
+          <div class="hero-container">
+            <div class="hero-texto">
+              <h2>Hola <p class="punto"></p> <br></h2>
+              <h3 class="name">Soy Agustin Gonzalez</h3>
+              <h3>Programador + <br>Desarrollador Full Stack </h3>
+              <p>Entusiasta con experiencia en
+                Desarrollo de software,<br> habilidades para la resolución de
+                problemas y trabajo en equipo.</p>
+                <div class="botones">
+                  <button class="btn-cta">Descargar CV</button>
+                  <button class="btn-cta2">Contacto</button>
+                </div>
+              </div>
+              <div class="hero-imagen">
+
+              </div>
             </div>
           </div>
-          <div class="hero-imagen">
-            <img class="img1" src="/public/Rulete.png" alt="Foto">
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
   
-    <!--! Sección About -->
-    <section class="container about-container">
-      <h4 class="about">Sobre Mi</h4>
-      <p class="txt-abt">
-        Desarrollo aplicaciones con una mentalidad analítica y colaborativa, enfocándome en crear sistemas <span class="resaltado">funcionales y adaptables</span>. Me motiva mejorar constantemente mis capacidades y participar en proyectos que impulsen la innovación y la eficiencia tecnológica.
-      </p>
-      <br>
-      <p class="txt-abt txt-sec"> Soy una persona que busca superarse y dar siempre lo mejor de sí. Me encuentro <span class="resaltado">abierto a nuevas oportunidades</span> que me permitan seguir creciendo profesionalmente y aportar valor a proyectos desafiantes.  </p>
+      <!--! Sección About -->
+<section class="container about-container">
+  <h4 class="about">Sobre Mi</h4>
+  <p class="txt-abt">
+    Desarrollo aplicaciones con una mentalidad analítica y colaborativa, enfocándome en crear sistemas <span class="resaltado">funcionales y adaptables</span>. Me motiva mejorar constantemente mis capacidades y participar en proyectos que impulsen la innovación y la eficiencia tecnológica.
+  </p>
+        <br>
+  <p class="txt-abt txt-sec"> Soy una persona que busca superarse y dar siempre lo mejor de sí. Me encuentro <span class="resaltado">abierto a nuevas oportunidades</span> que me permitan seguir creciendo profesionalmente y aportar valor a proyectos desafiantes.
+  </p>
     <div class="blur-sec"></div>
     <div class="abt-ct"></div>
-  </section>
-  
-  <div class="linea"></div>
-  
-  <!--! ---------------------------------------------------- SVG  -->
-  <div class="img-oficina"> <img class="img-oficina2" src="./public/oficina.jpeg" alt=""></div>
-  
+</section>
+<div class="linea"></div>
+<dotlottie-player class="animation"
+      src="https://lottie.host/cfc10b49-8f33-401a-9666-8a34ec034b4e/ns5SumjftW.lottie"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay
+></dotlottie-player>
 
 
+<!--! PROYECTOS -->
+<section class="proyectos">
+  <h2>Mis Proyectos</h2>
+  <div class="cards-container">
+    <div class="card">
+      <h3>Proyecto 1</h3>
+      <p>Descripción proyecto 1.</p>
+    </div>
+    <div class="card">
+      <h3>Proyecto 2</h3>
+      <p>Descripción proyecto 2.</p>
+    </div>
+    <div class="card">
+      <h3>Proyecto 3</h3>
+      <p>Descripción proyecto 3.</p>
+    </div>
+  </div>
+</section>
 
 
-</body>
+  </body>
 </html>
+

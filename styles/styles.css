@@ -13,15 +13,18 @@
   --color-primario: #111111;
   --color-secundario: #6c63ff;
   --color-texto: #eeeeee;
-  --color-fondo: #0D0110;                        /* #0E0126 */
-  --color-acento: #272727;
+   --color-fondo: #0D0110;                         /* #0E0126    ->0D0110;            */
+   --color-acento: #272727; 
   --fuente-principal: Arial Narrow Bold, sans-serif;
+}
+html{
+  background-color: var(--color-fondo); 
 }
 
 /* Estilos base */
 body {
   font-family: var(--fuente-principal);
-  background-color: var(--color-fondo);
+  background-color: var(--color-fondo); 
   color: var(--color-texto);
   line-height: 1.6;
 }
@@ -31,15 +34,11 @@ a {
   color: inherit;
 }
 
-button:hover {
-  background-color: var(--color-acento);
-}
-.btn-cta2:hover{
-  background-color: #6c63ff;
-}
+
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: auto;
   padding: 0 1rem;
 }
@@ -57,21 +56,24 @@ button:hover {
 
 .nav {
   margin: 0 auto;
-  
 }
 .logo{
-  max-width: 80px;
-  max-height: 70px;
-  border: 1px solid #6c63ff;
-  border-radius: 15%;
-  overflow: hidden;
+  position: relative;
+  left: 15px;
+  width: 70px;
+  max-height: 55px;
   object-fit: cover;
+  overflow: hidden;
 }
 
-.imglogo{
-  width: 80px;
-  height: 70px;
-}
+ .imglogo{
+  position: relative;
+  bottom: 18px;
+  background-color: #6c63ff;
+  width: 100%;
+  height: 100%;
+  border-radius: 15%;
+} 
 
 .nav-list {
   display: flex;
@@ -167,7 +169,7 @@ max-height: 1000px;
 display: flex;
 padding: 30px;
 z-index: 1;
-overflow: hidden;
+
 /* border: 1px solid red; */
 margin-bottom: 50px;
 }
@@ -204,8 +206,8 @@ font-weight: normal;
 
 .punto{
   position: relative;
-  top: 22px;
-  left: 3px;
+  top: 14px;
+  left: 3.5px;
   width: 5px;
   height: 5px;
   display: flex;
@@ -256,7 +258,7 @@ button {
   font-family: Arial Narrow Bold, sans-serif;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   background-color: var(--color-secundario);
   color: #fff;
   transition: background-color 0.3s ease;
@@ -264,81 +266,56 @@ button {
 
 .btn-cta2{
   background-color: #272727;
-  border: 1px solid #8B4EF9 ;
+  border: 1px solid #8B4EF9;
+}
+
+button:hover {
+  background-color: var(--color-acento);
+  border: 1px solid #8B4EF9;
+
+}
+.btn-cta2:hover{
+  background-color: #6c63ff;
 }
 
 /*! ------------------------------------------------------------ */                         /* ! Parte derecha HERO */
 .hero-imagen{                                                                          
-  display: flex;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: auto;
   border-radius: 1rem;
   overflow: hidden;
 }
 
 .img1{
-  position: relative;
-  left: 10px;
-  top: 25px;
-  width: 100%;
-  height: 45vh;
-/*   border: 1px solid red; */
-  object-fit: contain;
+  height: 45vh; 
+  object-fit: cover;
+
 }
 
 /*! ----------------------------------------------------------- */                                  /* BLUR */
-.blur{
-  position: absolute;
-  width: 200px;
-  height: 200px;
-/*   background-color: #8B4EF9;  */               /*!Revisar si ponerlo o no */
-  filter: blur(150px);
-border-radius: 50%;
-top: 200px;
-}
 
-.blur-top{
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: #8B4EF9;
-  top: -15px;
-  left: 140px;
-  border-radius: 50%;
-  filter: blur(110px);
-}
-
-.blur-sec{
-position: absolute;
-left: 20px;
-border: 1px solid red;
-width: 300px;
-height: 430px;
-background-color: #8B4EF9;                /*! Revisar si ponerlo o no */
-filter: blur(150px);
-box-shadow: 5px 5px 5px 15px #8B4EF9;
-}
 
 .blur-th{
   position: absolute;
   width: 380px;
   height: 400px;
-  background-color: #8B4EF9;
+   background-color: #8B4EF9; 
   left: 750px;
-  top: 150px;
+  top: 100px;
   filter: blur(90px);
 }
 .blur-ring{                              /*! Ajustar medidas mas chica o mas grande */
   position: absolute;
   width: 30rem;
   height: 45vh;
-  background-color: #8B4EF9;
+   background-color: #8B4EF9; 
   left: 700px;
   top: 29px;
   border-radius: 50%;
-  background: transparent;
+   background: transparent; 
   border:25px solid #8B4EF9;
   filter: brightness(1.01);
+  overflow: hidden;
 }
 
 /*! ----------------------------------------------- */                       /* ABOUT */
@@ -349,8 +326,18 @@ box-shadow: 5px 5px 5px 15px #8B4EF9;
   justify-content: end;
   align-items: top;
   flex-wrap: wrap;
+  border: 1px solid red;
 }
 
+.blur-sec{
+position: absolute;
+left: 80px;
+bottom: -220px;
+width: 300px;
+height: 400px;
+background-color: #8B4EF9;                
+filter: blur(60px);
+}
 .about{
   font-size: 3.2rem;
   width: 250px;
@@ -393,170 +380,34 @@ box-shadow: 5px 5px 5px 15px #8B4EF9;
   background-color: #8B4EF9;
 }
 
-
-
-
-
-#svg-global {
-  zoom: 1.2;
-  overflow: visible;
-  transform: translate(410px, -750px);
-
-  width: 120px;
+.animation{
+  width: 400px;
   height: 300px;
+  position: relative;
+  bottom: 520px;
+  left: 25px;
 }
 
-@keyframes fade-particles {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
+/*! --------------PROYECTOS */
+.proyectos {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid red;
+  position: relative;
+  bottom: 300px;
 }
 
-@keyframes floatUp {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-#particles {
-  animation: fade-particles 5s infinite alternate;
+.card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
 }
-.particle {
-  animation: floatUp linear infinite;
-}
-
-.p1 {
-  animation-duration: 2.2s;
-  animation-delay: 0s;
-}
-.p2 {
-  animation-duration: 2.5s;
-  animation-delay: 0.3s;
-}
-.p3 {
-  animation-duration: 2s;
-  animation-delay: 0.6s;
-}
-.p4 {
-  animation-duration: 2.8s;
-  animation-delay: 0.2s;
-}
-.p5 {
-  animation-duration: 2.3s;
-  animation-delay: 0.4s;
-}
-.p6 {
-  animation-duration: 3s;
-  animation-delay: 0.1s;
-}
-.p7 {
-  animation-duration: 2.1s;
-  animation-delay: 0.5s;
-}
-.p8 {
-  animation-duration: 2.6s;
-  animation-delay: 0.2s;
-}
-.p9 {
-  animation-duration: 2.4s;
-  animation-delay: 0.3s;
-}
-
-@keyframes bounce-lines {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-#line-v1,
-#line-v2,
-#node-server,
-#panel-rigth,
-#reflectores,
-#particles {
-  animation: bounce-lines 3s ease-in-out infinite alternate;
-}
-#line-v2 {
-  animation-delay: 0.2s;
-}
-
-#node-server,
-#panel-rigth,
-#reflectores,
-#particles {
-  animation-delay: 0.4s;
-}
-
-.img-oficina{
-  max-width: 400px;
-  max-height: 530px;
-overflow: hidden;
-object-fit: cover;
-transform: translate(50px, -590px);
-
-
-}
-
-.img-oficina2{
-  padding: 2.8px;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;;
-  position:relative;
-  cursor: pointer;
-  transition-duration: .2s;
-
-}
-
-.img-oficina:before, .card:after {
-  content: '';
-  position: absolute;
-  left: -2px;
-  top: -2px;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #8B4EF9, #350182, #8B4EF9,#350182, #8B4EF9, #350182, 
-		#8B4EF9, #350182,#8B4EF9, #350182);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: steam 20s linear infinite;
-}
-
-@keyframes steam {
-  0% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 400% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.img-oficina:after {
-  filter: blur(100px);
-}
-
-
-
-
