@@ -7,12 +7,13 @@
 
 }
 
+
 /* Variables */
 :root {
   --color-primario: #111111;
   --color-secundario: #6c63ff;
   --color-texto: #eeeeee;
-  --color-fondo: #111111;
+  --color-fondo: #0D0110;                        /* #0E0126 */
   --color-acento: #272727;
   --fuente-principal: Arial Narrow Bold, sans-serif;
 }
@@ -23,7 +24,6 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   line-height: 1.6;
-
 }
 
 a {
@@ -58,6 +58,19 @@ button:hover {
 .nav {
   margin: 0 auto;
   
+}
+.logo{
+  max-width: 80px;
+  max-height: 70px;
+  border: 1px solid #6c63ff;
+  border-radius: 15%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.imglogo{
+  width: 80px;
+  height: 70px;
 }
 
 .nav-list {
@@ -96,7 +109,7 @@ top: 0px;
 left: 0;
 width: 115px;
 height: 100%;
-background: linear-gradient(to right, #3e06a4, #370491, #2f037e, #28026c, #21015a);
+background-color: #4005ae;
 transition: left 0.3s ease, border-radius 0.3s ease, opacity 0.5s ease-in-out; /* Agregado el delay */
 z-index: 0;
 opacity: 0; 
@@ -297,9 +310,10 @@ top: 200px;
 
 .blur-sec{
 position: absolute;
-left: -70px;
+left: 20px;
+border: 1px solid red;
 width: 300px;
-height: 350px;
+height: 430px;
 background-color: #8B4EF9;                /*! Revisar si ponerlo o no */
 filter: blur(150px);
 box-shadow: 5px 5px 5px 15px #8B4EF9;
@@ -358,6 +372,7 @@ box-shadow: 5px 5px 5px 15px #8B4EF9;
   font-size: 1.2rem;
   position: relative;
   bottom: 5vh;
+  transform: translateY(-90px);
 }
 
 .resaltado{
@@ -377,3 +392,171 @@ box-shadow: 5px 5px 5px 15px #8B4EF9;
   left: 930px;
   background-color: #8B4EF9;
 }
+
+
+
+
+
+#svg-global {
+  zoom: 1.2;
+  overflow: visible;
+  transform: translate(410px, -750px);
+
+  width: 120px;
+  height: 300px;
+}
+
+@keyframes fade-particles {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+
+#particles {
+  animation: fade-particles 5s infinite alternate;
+}
+.particle {
+  animation: floatUp linear infinite;
+}
+
+.p1 {
+  animation-duration: 2.2s;
+  animation-delay: 0s;
+}
+.p2 {
+  animation-duration: 2.5s;
+  animation-delay: 0.3s;
+}
+.p3 {
+  animation-duration: 2s;
+  animation-delay: 0.6s;
+}
+.p4 {
+  animation-duration: 2.8s;
+  animation-delay: 0.2s;
+}
+.p5 {
+  animation-duration: 2.3s;
+  animation-delay: 0.4s;
+}
+.p6 {
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+}
+.p7 {
+  animation-duration: 2.1s;
+  animation-delay: 0.5s;
+}
+.p8 {
+  animation-duration: 2.6s;
+  animation-delay: 0.2s;
+}
+.p9 {
+  animation-duration: 2.4s;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce-lines {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+#line-v1,
+#line-v2,
+#node-server,
+#panel-rigth,
+#reflectores,
+#particles {
+  animation: bounce-lines 3s ease-in-out infinite alternate;
+}
+#line-v2 {
+  animation-delay: 0.2s;
+}
+
+#node-server,
+#panel-rigth,
+#reflectores,
+#particles {
+  animation-delay: 0.4s;
+}
+
+.img-oficina{
+  max-width: 400px;
+  max-height: 530px;
+overflow: hidden;
+object-fit: cover;
+transform: translate(50px, -590px);
+
+
+}
+
+.img-oficina2{
+  padding: 2.8px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;;
+  position:relative;
+  cursor: pointer;
+  transition-duration: .2s;
+
+}
+
+.img-oficina:before, .card:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #8B4EF9, #350182, #8B4EF9,#350182, #8B4EF9, #350182, 
+		#8B4EF9, #350182,#8B4EF9, #350182);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.img-oficina:after {
+  filter: blur(100px);
+}
+
+
+
+
