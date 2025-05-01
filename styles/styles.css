@@ -35,7 +35,6 @@ a {
 }
 
 
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -65,7 +64,7 @@ a {
   object-fit: cover; 
 }
 
- .imglogo{
+.imglogo{
   position: relative;
   background-color: #6c63ff;
   width: 60px;
@@ -99,7 +98,7 @@ text-decoration: none;
 color: white;
 z-index: 2;
 position: relative;
-color: #B0B0B0; /* Gris claro */
+color: #B0B0B0;                                             /* Gris claro */
 transition: color 0.3s ease;
 }
 
@@ -113,7 +112,7 @@ background-color: #4005ae;
 transition: left 0.3s ease, border-radius 0.3s ease, opacity 0.5s ease-in-out; /* Agregado el delay */
 z-index: 0;
 opacity: 0; 
-visibility:visible; /* También lo ocultamos */
+visibility:visible;                                       /* También lo ocultamos */
 }
 
 .nav-list li:nth-child(1):hover ~ .span {
@@ -150,14 +149,14 @@ visibility: visible;
 }
 
 .nav-list a:hover {
-color: #FFFFFF; /* Blanco cuando pasa el mouse */
+color: #FFFFFF;                                                  /* Blanco cuando pasa el mouse */
 }
 
 
 
 
 
-/*! ----------------------------------------------------------- */                                 /*     HERO    */
+/*! ----------------------------------------------------------- */              /*     HERO    */
 
 
 .hero {
