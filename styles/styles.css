@@ -27,6 +27,9 @@ body {
   background-color: var(--color-fondo); 
   color: var(--color-texto);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 a {
@@ -36,10 +39,14 @@ a {
 
 
 .container {
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
+/*   max-width: 1200px; */
+  width: 100dvw; 
   padding: 0 1rem;
+  display: flex;
+  border: 1px solid green;
+/*   justify-content: center;
+  align-items: center; */
+
 }
 
 /* !Header  */
@@ -51,6 +58,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 1;
+  border: 1px solid red;
+
 }
 
 .nav {
@@ -77,6 +86,7 @@ a {
   gap: 0;
   list-style: none;
   background-color: #272727;
+  border: 1px solid #8B4EF9;
   
   padding: 0;
   border-radius: 30px;
@@ -162,35 +172,35 @@ color: #FFFFFF;                                                  /* Blanco cuand
 .hero {
 position: relative;
 width: 100%;
-max-height: 1000px;
+max-height: 100vh;
 display: flex;
 padding: 30px;
 z-index: 1;
-
-/* border: 1px solid red; */
+/* border: 1px solid red; */ 
 margin-bottom: 50px;
 }
 
 .hero-container {
 position: relative; 
-width: 100%;
-height: 600px;
+width: 140vh;
+height: 80vh;
 display: flex;
 z-index: 1;
-border-radius: 45px;
-/* border: 1px solid red; */
-overflow: hidden;
+/* border: 1px solid greenyellow; */
+
 }
 
 .hero-texto {
 width: 100%;
+height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
 text-align: center;
 gap: 15px;
+padding-left: 5px;
 position: relative;
-bottom: 50px;
+border: 5px solid blue;
 }
 
 /*! ----------------------------------------------------------- */                                 /* TEXTO */
@@ -276,7 +286,8 @@ button:hover {
 }
 
 /*! ------------------------------------------------------------ */                         /* ! Parte derecha HERO */
-.hero-imagen{                                                                          
+.hero-imagen{   
+/*   border: 1px solid greenyellow;   */                                                                   
   width: 100%;
   height: auto;
   border-radius: 1rem;
@@ -286,7 +297,7 @@ button:hover {
 .img1{
   height: 45vh; 
   object-fit: cover;
-
+  border: 1px solid white;
 }
 
 /*! ----------------------------------------------------------- */                                  /* BLUR */
@@ -300,6 +311,7 @@ button:hover {
   left: 750px;
   top: 100px;
   filter: blur(90px);
+  z-index: 0;
 }
 .blur-ring{                              /*! Ajustar medidas mas chica o mas grande */
   position: absolute;
@@ -313,11 +325,13 @@ button:hover {
   border:25px solid #8B4EF9;
   filter: brightness(1.01);
   overflow: hidden;
+  z-index: 1;
 }
 
 /*! ----------------------------------------------- */                       /* ABOUT */
 .about-container{
-  width: 100%;
+  width: 100dvw;
+/*   overflow: hidden; */
   height: 60vh;
   display: flex;
   justify-content: end;
@@ -337,20 +351,20 @@ filter: blur(60px);
 }
 .about{
   font-size: 3.2rem;
-  width: 250px;
-  height: 7vh;position: relative;
-  left: 30vw;
+  height: 12vh;
+  position: relative;
+  left: 100vh;
 }
 
 .txt-abt{
   display: block;
   align-self: center;
   position: relative;
-  right: 4vw;
-  width: 600px;
-  height: 180px;
+  right: -10vw;
+  width: 90vh;
+  height: 10vh;
   overflow: hidden;
-  top: 4vh;
+  top: 1vh;
 }
 .txt-sec{
   font-size: 1.2rem;
@@ -378,11 +392,10 @@ filter: blur(60px);
 }
 
 .animation{
-  width: 400px;
-  height: 300px;
+  width: 40vh;
   position: relative;
-  bottom: 520px;
-  left: 25px;
+  bottom: 55vh;
+  left: 20vw;
 }
 
 /*! --------------PROYECTOS */
