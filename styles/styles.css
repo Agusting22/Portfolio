@@ -39,17 +39,12 @@ a {
 
 
 .container {
-/*   max-width: 1200px; */
   width: 100dvw; 
   padding: 0 1rem;
   display: flex;
-  border: 1px solid green;
-/*   justify-content: center;
-  align-items: center; */
-
 }
 
-/* !Header  */
+/*! ----------------------------------------------------------- Header  */
 .header-container {
   display: flex;
   align-items: center;
@@ -58,42 +53,25 @@ a {
   position: sticky;
   top: 0;
   z-index: 1;
-  border: 1px solid red;
-
 }
 
 .nav {
   margin: 0 auto;
 }
-.logo{
-  position: relative;
-  left: 15px;
-  width: 70px;
-  max-height: 55px;
-  object-fit: cover; 
-}
-
-.imglogo{
-  position: relative;
-  background-color: #6c63ff;
-  width: 60px;
-  height: 100%;
-  border-radius: 15%;
-} 
 
 .nav-list {
   display: flex;
-  gap: 0;
+  gap: 5vh;
   list-style: none;
   background-color: #272727;
   border: 1px solid #8B4EF9;
-  
   padding: 0;
-  border-radius: 30px;
+  border-radius: 30vh;
   font-size: 0.9rem;
   margin: 0 auto;
   position: relative;
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 255);
+  position: sticky;
 }
 
 .nav-list li {
@@ -162,10 +140,6 @@ visibility: visible;
 color: #FFFFFF;                                                  /* Blanco cuando pasa el mouse */
 }
 
-
-
-
-
 /*! ----------------------------------------------------------- */              /*     HERO    */
 
 
@@ -176,13 +150,13 @@ max-height: 100vh;
 display: flex;
 padding: 30px;
 z-index: 1;
-/* border: 1px solid red; */ 
+border: 1px solid red;  
 margin-bottom: 50px;
 }
 
 .hero-container {
 position: relative; 
-width: 140vh;
+width: 100%;
 height: 80vh;
 display: flex;
 z-index: 1;
@@ -200,7 +174,6 @@ text-align: center;
 gap: 15px;
 padding-left: 5px;
 position: relative;
-border: 5px solid blue;
 }
 
 /*! ----------------------------------------------------------- */                                 /* TEXTO */
@@ -213,7 +186,7 @@ font-weight: normal;
 
 .punto{
   position: relative;
-  top: 14px;
+  top: 1.4vh;
   left: 3.5px;
   width: 5px;
   height: 5px;
@@ -288,41 +261,36 @@ button:hover {
 /*! ------------------------------------------------------------ */                         /* ! Parte derecha HERO */
 .hero-imagen{   
 /*   border: 1px solid greenyellow;   */                                                                   
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
+  width: 100vh;
   overflow: hidden;
 }
-
 .img1{
-  height: 45vh; 
+  height: 50vh; 
   object-fit: cover;
-  border: 1px solid white;
 }
-
 /*! ----------------------------------------------------------- */                                  /* BLUR */
 
-
 .blur-th{
+  border: 1px solid red;
   position: absolute;
-  width: 380px;
-  height: 400px;
+  width: 50vh;
+  height: 50vh;
    background-color: #8B4EF9; 
-  left: 750px;
-  top: 100px;
-  filter: blur(90px);
+  left: 80vh;
+  top: 10vh;
+  filter: blur(100vh);
   z-index: 0;
 }
 .blur-ring{                              /*! Ajustar medidas mas chica o mas grande */
   position: absolute;
-  width: 30rem;
-  height: 45vh;
+  width: 50vh;
+  height: 46vh;
    background-color: #8B4EF9; 
-  left: 700px;
-  top: 29px;
+  left: 83vh;
+  top: 10vh;
   border-radius: 50%;
    background: transparent; 
-  border:25px solid #8B4EF9;
+  border: 25px solid #8B4EF9;
   filter: brightness(1.01);
   overflow: hidden;
   z-index: 1;
@@ -330,47 +298,49 @@ button:hover {
 
 /*! ----------------------------------------------- */                       /* ABOUT */
 .about-container{
-  width: 100dvw;
-/*   overflow: hidden; */
-  height: 60vh;
+  width: 100%;
+  position: relative;
+  height: 82vh;
   display: flex;
   justify-content: end;
   align-items: top;
   flex-wrap: wrap;
-  border: 1px solid red;
 }
 
 .blur-sec{
 position: absolute;
-left: 80px;
-bottom: -220px;
-width: 300px;
-height: 400px;
+left: 13vh;
+bottom: 3vw;
+width: 25vh;
+height: 65vh;
 background-color: #8B4EF9;                
-filter: blur(60px);
+filter: blur(100px);
 }
 .about{
   font-size: 3.2rem;
-  height: 12vh;
-  position: relative;
-  left: 100vh;
+  height: auto;
+  position: absolute;
+  right: 30vh;
+  top: 8vh;
+
 }
 
 .txt-abt{
   display: block;
   align-self: center;
-  position: relative;
-  right: -10vw;
-  width: 90vh;
-  height: 10vh;
+  position: absolute;
+  width: 70vh;
+  height: auto;
   overflow: hidden;
-  top: 1vh;
+  top: 25vh;
+  font-size: 1.3rem;
 }
 .txt-sec{
-  font-size: 1.2rem;
-  position: relative;
-  bottom: 5vh;
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: -20vh;
   transform: translateY(-90px);
+
 }
 
 .resaltado{
@@ -378,6 +348,7 @@ filter: blur(60px);
   box-shadow: 0 0 1px 0 #8B4EF9;
 }
 .linea{
+  border: 1px solid red;
   position: relative;
   width: 270px;
   height: 7px;
@@ -387,24 +358,22 @@ filter: blur(60px);
   0 0 20px #8B4EF9,
   0 0 40px #8B4EF9;
   bottom: 560px;
-  left: 930px;
+  left: 114vh;
   background-color: #8B4EF9;
 }
 
 .animation{
   width: 40vh;
-  position: relative;
-  bottom: 55vh;
-  left: 20vw;
+  position:absolute;
+  bottom: 1vw;
+  right: 60vw;
 }
 
 /*! --------------PROYECTOS */
 .proyectos {
   padding: 2rem;
   text-align: center;
-  border: 1px solid red;
   position: relative;
-  bottom: 300px;
 }
 
 .cards-container {
