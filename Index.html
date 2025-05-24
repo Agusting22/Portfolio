@@ -10,101 +10,155 @@
   src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
   type="module"
 ></script>
+
   
 </head>
-<body >
+<body class="relative bg-transparent min-h-screen">
+  <!-- Fondo principal: gradiente radial + gradiente diagonal violeta-celeste -->
+  <div class="fixed inset-0 -z-50 w-full h-full"
+       style="background: radial-gradient(150% 120% at 50% 80%, #000 40%, transparent 100%), linear-gradient(-50deg, #361b7d 50%, #40c9ff 150%);">
+  </div>
 
-<!--! -------------------------------------------------------------  ESTE PORTFOLIO DEBE VERSE EN UNA VISTA 1200X1000--------- -->
 
 
       <!--! Header -->
-      <header>
-        <div class="header-container">
-  
-<!--           <div class="logo"><img class="imglogo" src="./public/logoAG.png" alt=""></div> -->
-          <nav class="nav">
-            <ul class="nav-list">
-              <li><a href="#sobre-mi">Sobre mí</a></li>
-              <li><a href="#proyectos">Proyectos</a></li>
-              <li><a href="#habilidades">Habilidades</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <span class="span"></span>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      
-      
-      
-      <!--! HERO -->
-      
-      <section class="hero">
-        
-        <div class="container">
-          <div class="blur-th"></div>
-          <div class="blur-ring"><img class="img1" src="./public/agusimg.webp" alt="Foto"></div>
-          <div class="hero-container">
-            <div class="hero-texto">
-              <h2>Hola <p class="punto"></p> <br></h2>
-              <h3 class="name">Soy Agustin Gonzalez</h3>
-              <h3>Programador + <br>Desarrollador Full Stack </h3>
-              <p>Entusiasta con experiencia en
-                Desarrollo de software,<br> habilidades para la resolución de
-                problemas y trabajo en equipo.</p>
-                <div class="botones">
-                  <button class="btn-cta">Descargar CV</button>
-                  <button class="btn-cta2">Contacto</button>
-                </div>
-              </div>
-              <div class="hero-imagen">
+<header class="relative z-50">
+  <div class="nav-blur"></div>
 
-              </div>
-            </div>
-          </div>
-        </section>
-  
-      <!--! Sección About -->
-<section class="about-container">
-  <h4 class="about">Sobre Mi</h4>
-  <p class="txt-abt">
-    Desarrollo aplicaciones con una mentalidad analítica y colaborativa, enfocándome en crear sistemas <span class="resaltado">funcionales y adaptables</span>. Me motiva mejorar constantemente mis capacidades y participar en proyectos que impulsen la innovación y la eficiencia tecnológica.
+  <div class="flex justify-center px-2 sm:px-4 md:px-6 py-2 sm:py-4 min-h-[60px] sm:min-h-[80px] md:min-h-[1vh] sticky top-0 z-50 backdrop-blur bg-transparent [1vh]">
+    <nav class="w-full max-w-full md:max-w-2xl">
+      <ul
+        class="flex flex-wrap gap-4 sm:gap-8 md:gap-16 list-none rounded-full text-[0.9rem] shadow-lg px-2 py-6 sm:py-12 md:py-24 min-h-[40px] my-4 sm:my-8 justify-center items-center"
+        style="border: 2px solid transparent; background: linear-gradient(#272727, #272727) padding-box, linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%) border-box;"
+      >
+        <li class="relative ">
+          <a href="#sobre-mi" class="block px-8 py-2  text-[#B0B0B0] hover:text-white transition-colors font-semibold">Sobre mí</a>
+        </li>
+        <li class="relative">
+          <a href="#sobre-mi" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Experiencia</a>
+        </li>
+        <li class="relative">
+          <a href="#proyectos" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Proyectos</a>
+        </li>
+        <li class="relative">
+          <a href="#habilidades" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Habilidades</a>
+        </li>
+        <li class="relative">
+          <a href="#contacto" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <!--! HERO -->
+<section class="hero relative w-full max-h-screen flex flex-col lg:flex-row p-2 sm:p-6 md:p-[30px] z-[1] mb-8 md:mb-[50px]">
+  <!-- Contenedor para superponer blur y foto a la derecha -->
+  <div class="hidden lg:flex flex-col items-end justify-center absolute right-[40vh] top-[12vh] h-[50vh] w-[50vh] z-10">
+    <div class="blur-ring absolute w-full h-full rounded-full bg-transparent z-1 flex items-center justify-center overflow-hidden">
+      <img class="img1 h-full object-cover rounded-full z-10" src="./public/agusimg.webp" alt="Foto">
+    </div>
+      <div class="h-[40vh] w-[60vh] relative left-[5vh] bottom-[11.5vh]">
+    <img class="logo" src="./public/moon.png" alt="Logo">
+  </div>
+  </div>
+  <!-- Mobile: solo imagen centrada -->
+  <div class="relative w-full flex justify-center lg:hidden z-10">
+    <img class="img1 h-[30vh] sm:h-[40vh] md:h-[60vh] object-cover rounded-full block" src="./public/agusimg.webp" alt="Foto">
+  </div>
+  <!-- Contenedor del texto principal del hero -->
+  <div class="hero-container relative w-full flex flex-col  justify-center z-[1] mt-4 lg:mt-0 lg:order-1 h-[80vh] ">
+    <div class="hero-texto max-w-xl flex flex-col items-start text-left gap-4 sm:gap-[15px] pl-0 sm:pl-[5px] relative left-[23vh] lg:pl-16">
+      <!-- Saludo y punto decorativo -->
+      <h2 class="flex  justify-start ">
+        Hola <p class="punto relative top-[1.4vh] left-[3.5px] w-[5px] h-[5px] flex justify-center rounded-full p-[3px] bg-[#40c9ff]"></p> <br>
+      </h2>
+      <!-- Nombre -->
+      <h3 class="name relative bottom-[10px] text-[1.5rem] justify-start bg-white">Soy Agustin Gonzalez</h3>
+      <!-- Título -->
+      <h3 class=" hero-tt relative bottom-[15px] flex justify-start text-start  bg-clip-text text-transparent drop-shadow-[0_4px_32px_#40c9ff]"
+          style="background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%); -webkit-background-clip: text; background-clip: text;">
+        Programador + <br>Desarrollador Full Stack
+      </h3>
+      <!-- Descripción -->
+      <p class="flex text-start text-[1.2rem]">
+        Entusiasta con experiencia en Desarrollo de software,<br> habilidades para la resolución de problemas y trabajo en equipo.
+      </p>
+      <!-- Botones de acción -->
+      <div class="botones flex justify-start gap-[30px]">
+        <div class="perro"><button class="btn-cta cursor-pointer font-[Arial_Narrow_Bold,sans-serif] border-none py-3 px-6 rounded bg-[#6c63ff] text-white">Descargar CV</button></div>
+        <div class="perro2"><button class="btn-cta2 cursor-pointer font-[Arial_Narrow_Bold,sans-serif] border border-[#8B4EF9]  rounded bg-[#272727] text-white ">Contacto</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--! Sección About -->
+<section class="about-container w-full relative h-auto min-h-[60vh] flex flex-col lg:flex-row justify-end items-start flex-wrap px-2 sm:px-8 py-8">
+  <!-- Blur decorativo lateral -->
+  <div class="blur-sec absolute left-[8vw] sm:left-[22vw] bottom-[3vw] w-[15vh] sm:w-[23vh] md:w-[40vh] h-[30vh] sm:h-[45vh] md:h-[50vh] bg-[#361b7d] blur-[60px] sm:blur-[80px] md:blur-[80px] md:top-[10%] "></div>
+  <!-- Título About -->
+  <h4 class=" about-tt w-[25vh] about text-2xl sm:text-3xl md:text-[3.2rem] absolute right-[55vw] sm:right-[60vw] md:right-[65vw] top-[4vh] sm:top-[8vh] md:left-[110vh]">Sobre Mi</h4>
+  <!-- Primer párrafo About -->
+  <p class="txt-abt block self-center absolute w-[90vw] sm:w-[60vw] md:w-[50vw] top-[12vh] sm:top-[18vh] md:top-[25vh] left-[2vh] sm:left-[5vw] md:left-[110vh] text-base sm:text-lg md:text-[1.3rem]">
+    Desarrollo aplicaciones con una mentalidad analítica y colaborativa, enfocándome en crear sistemas
+    <span class="resaltado text-[#8B4EF9] shadow-[0_0_1px_0_#8B4EF9]">funcionales y adaptables</span>.
+    Me motiva mejorar constantemente mis capacidades y participar en proyectos que impulsen la innovación y la eficiencia tecnológica.
   </p>
-        <br>
-  <p class="txt-abt txt-sec"> Soy una persona que busca superarse y dar siempre lo mejor de sí. Me encuentro <span class="resaltado">abierto a nuevas oportunidades</span> que me permitan seguir creciendo profesionalmente y aportar valor a proyectos desafiantes.
+  <!-- Segundo párrafo About -->
+  <p class="txt-abt txt-sec text-base sm:text-lg md:text-[1.3rem] absolute bottom-[-10vh] sm:bottom-[-15vh] md:bottom-[-20vh] translate-y-[-40px] sm:translate-y-[-60px] md:translate-y-[-90px] w-[90vw] sm:w-[60vw] md:w-[50vw] left-0 sm:left-[2vw] md:left-[110vh]">
+    Soy una persona que busca superarse y dar siempre lo mejor de sí. Me encuentro
+    <span class="resaltado text-[#8B4EF9] shadow-[0_0_1px_0_#8B4EF9]">abierto a nuevas oportunidades</span>
+    que me permitan seguir creciendo profesionalmente y aportar valor a proyectos desafiantes.
   </p>
-    <div class="blur-sec"></div>
-    <div class="abt-ct"></div>
-    <dotlottie-player class="animation"
-          src="https://lottie.host/cfc10b49-8f33-401a-9666-8a34ec034b4e/ns5SumjftW.lottie"
-          background="transparent"
-          speed="1"
-          loop
-          autoplay
-    ></dotlottie-player>
-  </section>
+  <!-- Animación decorativa About -->
+    <img
+    src="https://uiverse.io/astronaut.png"
+    alt=""
+    class="imagede relative left-[-5vh] sm:left-[5vh] md:left-[-120vh] sm:top-[10vh] md:top-[15vh] w-[30vh] sm:w-[40vh] md:w-[50vh] h-auto"
+  />
+</section>
   <!-- <div class="linea"></div> -->
 
 
 <!--! PROYECTOS -->
-<section class="proyectos">
-  <h2>Mis Proyectos</h2>
-  <div class="cards-container">
-    <div class="card">
-      <h3>Proyecto 1</h3>
-      <p>Descripción proyecto 1.</p>
+<section class="proyectos px-2 sm:px-8 py-8 text-center relative">
+  <h2 class="text-xl sm:text-2xl md:text-3xl mb-4 flex justify-center">Mis Proyectos</h2>
+  <div class="cards-container flex justify-center gap-4 sm:gap-8 flex-wrap mt-4 sm:mt-8">
+    <div class="card bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[#C084FC] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">Proyecto 1</h3>
+      <p class="text-[#E0E0E0]">Descripción proyecto 1.</p>
     </div>
-    <div class="card">
-      <h3>Proyecto 2</h3>
-      <p>Descripción proyecto 2.</p>
+    <div class="card bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[#C084FC] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">Proyecto 2</h3>
+      <p class="text-[#E0E0E0]">Descripción proyecto 2.</p>
     </div>
-    <div class="card">
-      <h3>Proyecto 3</h3>
-      <p>Descripción proyecto 3.</p>
+    <div class="card">Proyecto 3</h3>
+      <p class="text-[#E0E0E0]">Descripción proyecto 3.</p>
     </div>
   </div>
 </section>
 
 
-  </body>
+
+<img src="./public/astron.png" class="astron" alt="">
+
+<script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
+
+<!-- <dotlottie-player
+class="gato"
+  src="https://lottie.host/36b1037d-dcbc-41d6-939d-6e200fa74294/40m77IygL9.lottie"
+  background="transparent"
+  speed="1"
+  style="width: 300px; height: 300px"
+  loop
+  autoplay
+></dotlottie-player> -->
+
+
 </html>
 
