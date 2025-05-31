@@ -10,7 +10,6 @@
   src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
   type="module"
 ></script>
-
   
 </head>
 <body class="relative bg-transparent min-h-screen">
@@ -24,15 +23,14 @@
       <!--! Header -->
 <header class="relative z-50">
   <div class="nav-blur"></div>
-
-  <div class="flex justify-center px-2 sm:px-4 md:px-6 py-2 sm:py-4 min-h-[60px] sm:min-h-[80px] md:min-h-[1vh] sticky top-0 z-50 backdrop-blur bg-transparent [1vh]">
-    <nav class="w-full max-w-full md:max-w-2xl">
+  <div class="flex justify-center px-2 sm:px-4 md:px-6 py-0 min-h-[40px] sticky top-0 z-50 backdrop-blur bg-transparent">
+    <nav class="w-full max-w-full md:max-w-3xl flex items-center h-[4vh]">
       <ul
-        class="flex flex-wrap gap-4 sm:gap-8 md:gap-16 list-none rounded-full text-[0.9rem] shadow-lg px-2 py-6 sm:py-12 md:py-24 min-h-[40px] my-4 sm:my-8 justify-center items-center"
-        style="border: 2px solid transparent; background: linear-gradient(#272727, #272727) padding-box, linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%) border-box;"
+        class="nav-list flex flex-row items-center justify-center list-none rounded-full text-[0.8rem] shadow-lg px-2 py-0 min-h-[5vh] my-0"
+        style="border: 3px solid transparent; background: linear-gradient(-50deg, #4f00b7 0%, #40c9ff 100%) padding-box, linear-gradient(-50deg, #40c9ff 0%, #5a01ce 100%) border-box;"
       >
         <li class="relative ">
-          <a href="#sobre-mi" class="block px-8 py-2  text-[#B0B0B0] hover:text-white transition-colors font-semibold">Sobre mí</a>
+          <a href="#sobre-mi" class="block px-8 py-2  text-[black] hover:text-black transition-colors font-semibold">Sobre mí</a>
         </li>
         <li class="relative">
           <a href="#sobre-mi" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Experiencia</a>
@@ -42,6 +40,9 @@
         </li>
         <li class="relative">
           <a href="#habilidades" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Habilidades</a>
+        </li>
+        <li class="relative">
+          <a href="#trayectoria" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Trayectoria</a>
         </li>
         <li class="relative">
           <a href="#contacto" class="block px-8 py-2 text-[#B0B0B0] hover:text-white transition-colors font-semibold">Contacto</a>
@@ -71,35 +72,36 @@
   <div class="hero-container relative w-full flex flex-col  justify-center z-[1] mt-4 lg:mt-0 lg:order-1 h-[80vh] ">
     <div class="hero-texto max-w-xl flex flex-col items-start text-left gap-4 sm:gap-[15px] pl-0 sm:pl-[5px] relative left-[23vh] lg:pl-16">
       <!-- Saludo y punto decorativo -->
-      <h2 class="flex  justify-start ">
+      <h2 class="flex text-[1.5rem] justify-start" style="font-family: serif;">
         Hola <p class="punto relative top-[1.4vh] left-[3.5px] w-[5px] h-[5px] flex justify-center rounded-full p-[3px] bg-[#40c9ff]"></p> <br>
       </h2>
       <!-- Nombre -->
-      <h3 class="name relative bottom-[10px] text-[1.5rem] justify-start bg-white">Soy Agustin Gonzalez</h3>
+      <h3 class="name relative bottom-[10px] text-[1.5rem] justify-start bg-white">Soy Agustín Gonzalez</h3>
       <!-- Título -->
-      <h3 class=" hero-tt relative bottom-[15px] flex justify-start text-start  bg-clip-text text-transparent drop-shadow-[0_4px_32px_#40c9ff]"
-          style="background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%); -webkit-background-clip: text; background-clip: text;">
+      <h3 class=" hero-tt relative bottom-[15px] flex justify-start text-start  bg-clip-text text-transparent drop-shadow-[0_3vh_1vh_#40c9ff]"
+          style="background: linear-gradient(-45deg, #AF40FF 5%, #40c9ff 100%); -webkit-background-clip: text; background-clip: text;">
         Programador + <br>Desarrollador Full Stack
       </h3>
       <!-- Descripción -->
-      <p class="flex text-start text-[1.2rem]">
+      <p class="flex text-start text-[1.2rem]" style="font-family: serif;">
         Entusiasta con experiencia en Desarrollo de software,<br> habilidades para la resolución de problemas y trabajo en equipo.
       </p>
       <!-- Botones de acción -->
       <div class="botones flex justify-start gap-[30px]">
-        <div class="perro"><button class="btn-cta cursor-pointer font-[Arial_Narrow_Bold,sans-serif] border-none py-3 px-6 rounded bg-[#6c63ff] text-white">Descargar CV</button></div>
+        <div class="perro"><button class="btn-cta cursor-pointer font-[Arial_Narrow_Bold,sans-serif] border-none py-3 px-6 rounded  text-white">Descargar CV</button></div>
         <div class="perro2"><button class="btn-cta2 cursor-pointer font-[Arial_Narrow_Bold,sans-serif] border border-[#8B4EF9]  rounded bg-[#272727] text-white ">Contacto</button></div>
       </div>
     </div>
   </div>
 </section>
 
+<p class="Perfil w-20 relative left-256 top-38" style="color: #677381;">PERFIL</p>
 <!--! Sección About -->
 <section class="about-container w-full relative h-auto min-h-[60vh] flex flex-col lg:flex-row justify-end items-start flex-wrap px-2 sm:px-8 py-8">
   <!-- Blur decorativo lateral -->
   <div class="blur-sec absolute left-[8vw] sm:left-[22vw] bottom-[3vw] w-[15vh] sm:w-[23vh] md:w-[40vh] h-[30vh] sm:h-[45vh] md:h-[50vh] bg-[#361b7d] blur-[60px] sm:blur-[80px] md:blur-[80px] md:top-[10%] "></div>
   <!-- Título About -->
-  <h4 class=" about-tt w-[25vh] about text-2xl sm:text-3xl md:text-[3.2rem] absolute right-[55vw] sm:right-[60vw] md:right-[65vw] top-[4vh] sm:top-[8vh] md:left-[110vh]">Sobre Mi</h4>
+  <h4 class=" about-tt w-[25vh] about text-2xl sm:text-3xl md:text-[3.2rem] absolute right-[55vw] sm:right-[60vw] md:right-[65vw] top-[4vh] sm:top-[16vh] md:left-[110vh]">Sobre mí</h4>
   <!-- Primer párrafo About -->
   <p class="txt-abt block self-center absolute w-[90vw] sm:w-[60vw] md:w-[50vw] top-[12vh] sm:top-[18vh] md:top-[25vh] left-[2vh] sm:left-[5vw] md:left-[110vh] text-base sm:text-lg md:text-[1.3rem]">
     Desarrollo aplicaciones con una mentalidad analítica y colaborativa, enfocándome en crear sistemas
@@ -107,34 +109,27 @@
     Me motiva mejorar constantemente mis capacidades y participar en proyectos que impulsen la innovación y la eficiencia tecnológica.
   </p>
   <!-- Segundo párrafo About -->
-  <p class="txt-abt txt-sec text-base sm:text-lg md:text-[1.3rem] absolute bottom-[-10vh] sm:bottom-[-15vh] md:bottom-[-20vh] translate-y-[-40px] sm:translate-y-[-60px] md:translate-y-[-90px] w-[90vw] sm:w-[60vw] md:w-[50vw] left-0 sm:left-[2vw] md:left-[110vh]">
+  <p class="txt-abt txt-sec text-base sm:text-lg md:text-[1.3rem] absolute bottom-[-10vh] sm:bottom-[-15vh] md:bottom-[-20vh] translate-y-[-40px] sm:translate-y-[-60px] md:translate-y-[-320px] w-[90vw] sm:w-[60vw] md:w-[50vw] left-0 sm:left-[2vw] md:left-[110vh]">
     Soy una persona que busca superarse y dar siempre lo mejor de sí. Me encuentro
     <span class="resaltado text-[#8B4EF9] shadow-[0_0_1px_0_#8B4EF9]">abierto a nuevas oportunidades</span>
     que me permitan seguir creciendo profesionalmente y aportar valor a proyectos desafiantes.
   </p>
-  <!-- Animación decorativa About -->
-    <img
-    src="https://uiverse.io/astronaut.png"
-    alt=""
-    class="imagede relative left-[-5vh] sm:left-[5vh] md:left-[-120vh] sm:top-[10vh] md:top-[15vh] w-[30vh] sm:w-[40vh] md:w-[50vh] h-auto"
-  />
-</section>
-  <!-- <div class="linea"></div> -->
-
-
-<!--! PROYECTOS -->
-<section class="proyectos px-2 sm:px-8 py-8 text-center relative">
-  <h2 class="text-xl sm:text-2xl md:text-3xl mb-4 flex justify-center">Mis Proyectos</h2>
-  <div class="cards-container flex justify-center gap-4 sm:gap-8 flex-wrap mt-4 sm:mt-8">
-    <div class="card bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[#C084FC] ">
-      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">Proyecto 1</h3>
-      <p class="text-[#E0E0E0]">Descripción proyecto 1.</p>
+  <!--!-------------------------------------------CARDS---------------------------------- -->
+    <div class="cards-container w-full flex justify-around self-end gap-4 sm:gap-8 flex-wrap mt-4 sm:mt-8">
+    <div class="card card-1 bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[none] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2  text-[#C084FC]">Fix It</h3>
+      <p class="text-[#E0E0E0]">Descripción.</p>
     </div>
-    <div class="card bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[#C084FC] ">
-      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">Proyecto 2</h3>
-      <p class="text-[#E0E0E0]">Descripción proyecto 2.</p>
+    <div class="card card-2 bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[none] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">Aws + Infra</h3>
+      <p class="text-[#E0E0E0]">Descripción</p>
     </div>
-    <div class="card">Proyecto 3</h3>
+    <div class="card card-3 bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[none] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">RestoSuite</h3>
+      <p class="text-[#E0E0E0]">Descripción proyecto 3.</p>
+    </div>
+    <div class="card card-3 bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[none] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">RestoSuite</h3>
       <p class="text-[#E0E0E0]">Descripción proyecto 3.</p>
     </div>
   </div>
@@ -142,14 +137,111 @@
 
 
 
-<img src="./public/astron.png" class="astron" alt="">
+<!--! ------------- EXPERIENCIA ------------->
+
+
+
+<section class="exp-cont w-full relative h-auto min-h-[120vh] flex flex-col items-center justify-center px-2 sm:px-8 py-8">
+<!-- <p class="Tray w-20 relative bottom-15 right-150" style="color: white;">Trayectoria</p>
+ -->
+  <!-- Título de sección fuera del bloque -->
+  <h2 class=" exp-tt w-full text-center content-start text-4xl sm:text-3xl md:text-3xl font-bold mb-10" style="font-style: italic;">Experiencia Laboral</h2>
+  <div class="w-full max-w-7xl min-h-[50vh] gap-6 mt-5 flex flex-col items-center md:flex-row rounded-2xl shadow-xl bg-[transparent] backdrop-blur-lg p-6 md:p-10">
+    <!-- Lado izquierdo: texto -->
+    <div class="flex-1 flex flex-col justify-start items-start gap-6 p-6 md:p-10">
+      <div class="exp-txt text-base md:text-lg text-[#E0E0E0] w-full text-left space-y-4">
+        <p class="relative bottom-10"  style="font-family: serif; color: #677381;">TRAYECTORIA</p>
+        <p class="exp-txt-one text-3xl" style="font-family: serif;">Actualmente me desempeño en el puesto de Desarrollador y Diseñador Web para BairesGeeks.</p>
+        <p style="font-family: serif;">Mi día a día es recibir tareas y cumplirlas dentro del plazo establecido, donde puede variar entre:</p>
+        <ul class="list-disc list-inside pl-4" style="font-family: serif;">
+          <li class="" style="font-family: serif;">Modificar la estética visual</li>
+          <li style="font-family: serif;">Revisar funcionalidades</li>
+          <li style="font-family: serif;">Reunirnos y coordinar cambios con el grupo de trabajo.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Lado derecho: m2 -->
+    <div>
+      <div class="m2">
+        <img src="public/simbolo.png" class="w-40" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--! PROYECTOS -->
+<section class="proyectos min-h-[90vh] px-2 sm:px-8 py-8 text-center relative">
+  <h2 class="text-xl sm:text-2xl md:text-3xl mb-4 flex justify-center">Mis Proyectos</h2>
+  <div class="cards-container2 flex justify-center gap-4 sm:gap-8 flex-wrap mt-4 sm:mt-8">
+    <div class="card card-1 bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[#C084FC] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">Fix It</h3>
+      <p class="text-[#E0E0E0]">Descripción.</p>
+    </div>
+    <div class="card card-2 bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[#C084FC] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">Aws + Infraestructura</h3>
+      <p class="text-[#E0E0E0]">Descripción</p>
+    </div>
+    <div class="card card-3 bg-[#18122B] border-2 border-[#8B4EF9] rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 w-[90vw] sm:w-[320px] transition-all duration-300 hover:shadow-[0_0_32px_4px_#8B4EF9] hover:border-[#C084FC] ">
+      <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-[#C084FC]">RestoSuite</h3>
+      <p class="text-[#E0E0E0]">Descripción proyecto 3.</p>
+    </div>
+  </div>
+</section>
+
+<!--! Estudios -->
+<section class="estudios min-h-[90vh] px-2 sm:px-8 py-8 text-center relative">
+  <h2 class="text-xl sm:text-2xl md:text-3xl mb-4 flex justify-center">Mis Estudios</h2>
+  <div class="estudios-container flex flex-col items-center">
+    <p class="text-[#E0E0E0] mb-4">Aquí puedes incluir información sobre tu formación académica y cursos relevantes.</p>
+  </div>
+</section>
+
+<!--! CONTACTO -->
+<section class="contacto min-h-[90vh] px-2 sm:px-8 py-8 text-center relative">
+  <h2 class="text-xl sm:text-2xl md:text-3xl mb-4 flex justify-center">Contacto</h2>
+  <div class="contact-container flex flex-col items-center">
+    <p class="text-[#E0E0E0] mb-4">Si deseas ponerte en contacto conmigo, puedes hacerlo a través de las siguientes plataformas:</p>
+    <div class="social-links flex gap-4">
+      <a href="#" class="text-[#C084FC] hover:underline">LinkedIn</a>
+      <a href="#" class="text-[#C084FC] hover:underline">GitHub</a>
+      <a href="#" class="text-[#C084FC] hover:underline">Twitter</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script
   src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
   type="module"
 ></script>
 
-<!-- <dotlottie-player
+<dotlottie-player
 class="gato"
   src="https://lottie.host/36b1037d-dcbc-41d6-939d-6e200fa74294/40m77IygL9.lottie"
   background="transparent"
@@ -157,7 +249,7 @@ class="gato"
   style="width: 300px; height: 300px"
   loop
   autoplay
-></dotlottie-player> -->
+></dotlottie-player>
 
 
 </html>
