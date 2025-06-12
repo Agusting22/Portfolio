@@ -1,26 +1,26 @@
 import './style.css'
 
-let count = 40;
-let c = 1 / count;
+// Movimiento suave de las pelotitas con el scroll
+function lerp(a, b, n) { return a + (b - a) * n; }
 
-function draw() {
-	ctx.strokeStyle = 'hsl(180, 70%, 50%)';
-	
-	ctx.beginPath();
-	
-	let time_ = Date.now() * 0.0001;
-	
-	for(let i = 0; i < count; i++) {
-		let t_ = i * c;
-		
-		let time = (time_ + t_) % 1;
-		let t = ease.quint.in(time, 0, 1, 1);
-		let ty = ease.quint.out(t, 0, 1, 1);
-		
-		let x = lerp(width, 0, t);
-		let y = ty * height * 0.4;
-		line(x, y, x, height - y, false);
-	}
-	
-	ctx.stroke();
+const balls = [
+  { el: document.getElementById('blur-tl'), dir: -1, tx: 0 },
+  { el: document.getElementById('blur-tr'), dir: 1, tx: 0 },
+  { el: document.getElementById('blur-bl'), dir: -1, tx: 0 },
+  { el: document.getElementById('blur-br'), dir: 1, tx: 0 },
+];
+
+function animateBalls() {
+  const scrollY = window.scrollY || window.pageYOffset;
+  const maxMove = 60; // Máximo desplazamiento en px
+
+  balls.forEach(b => {
+    const targetX = b.dir * Math.min(scrollY / 8, maxMove);
+    b.tx = lerp(b.tx, targetX, 0.12);
+    if (b.el) b.el.style.transform = `translateX(${b.tx}px)`;
+  });
+
+  requestAnimationFrame(animateBalls);
 }
+
+animateBalls();
